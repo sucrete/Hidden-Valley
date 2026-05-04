@@ -1,3 +1,5 @@
+'use client';
+
 import RevealAnimation from '../animation/RevealAnimation';
 import ParallaxImageBackground from '../ui/ParallaxImageBackground';
 const features = ['36-Hole course.', 'World-class pro shop.', 'On-course beverage service.'];

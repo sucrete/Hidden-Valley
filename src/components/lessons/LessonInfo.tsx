@@ -1,3 +1,5 @@
+'use client';
+
 
 import Image from 'next/image';
 import RevealAnimation from '../animation/RevealAnimation';
@@ -30,7 +32,7 @@ const LessonInfo = () => {
           </div>
           <div className="col-span-12 lg:col-span-4">
             <RevealAnimation delay={0.6} direction="right">
-              <div className="p-2 lg:p-2 rounded-[20px] bg-white dark:bg-background-8 border border-[#80808021]">
+              <div className="p-2 lg:p-2 rounded-[20px] bg-white dark:bg-background-8 border border-[#80808021] shadow-2xl">
                <Image className='rounded-[12px]' src='/images/lessons/close-up-golf-ball.webp' width={600} height={600} alt=''/>
               </div>
             </RevealAnimation>

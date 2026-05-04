@@ -1,3 +1,5 @@
+'use client';
+
 import RevealAnimation from '../animation/RevealAnimation';
 import Map from '../shared/Map';
 import Image from 'next/image';

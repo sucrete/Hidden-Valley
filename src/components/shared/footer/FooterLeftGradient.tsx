@@ -1,3 +1,5 @@
+'use client';
+
 import RevealAnimation from '@/components/animation/RevealAnimation';
 import { cn } from '@/utils/cn';
 import gradient2 from '@public/images/gradient/gradient-2.png';

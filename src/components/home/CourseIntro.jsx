@@ -39,25 +39,24 @@ const CourseIntro = () => {
           {/* Left — text */}
           <div className="flex flex-col space-y-6">
             <RevealAnimation delay={0.1}>
-              <span className="badge badge-cyan w-fit">About us</span>
+              <span className="badge badge-basic w-fit">About us</span>
             </RevealAnimation>
             <RevealAnimation delay={0.2}>
               <h2 className="leading-[1.1]">
-                Hidden Valley Golf Course
+                An experience from the first tee.
               </h2>
             </RevealAnimation>
             <RevealAnimation delay={0.3}>
               <div className="space-y-4">
                 <p className="text-primary/70">
-                  Nestled in the heart of Cottage Grove, Oregon, Hidden Valley Golf Course is a golfer's paradise
-                  offering an unparalleled blend of scenic fairways and breathtaking Willamette Valley vistas. Our
-                  meticulously maintained course has earned a reputation as one of the premier golf destinations in
-                  the Pacific Northwest.
+                  Two par fives in the opening four holes will tell you everything you need to know about Hidden Valley.
+                  The setting is quiet — old oaks, open sky, Bennet Creek winding through — but the course doesn't let
+                  you get too comfortable.
                 </p>
                 <p className="text-primary/70">
-                  Immerse yourself in the beauty of lush, manicured landscapes as you tee off on our pristine course.
-                  With rolling terrain, strategically placed hazards, and stunning natural surroundings, every round
-                  here is an unforgettable experience — whether you're a seasoned pro or just starting out.
+                  Set on the northern slope of Mount David, this nine-hole course was shaped by the land rather than
+                  imposed on it. The atmosphere is unhurried and the care put into its playability shows — it's the
+                  kind of place you find yourself coming back to.
                 </p>
               </div>
             </RevealAnimation>

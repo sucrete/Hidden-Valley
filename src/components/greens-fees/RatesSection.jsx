@@ -1,3 +1,5 @@
+'use client';
+
 import RevealAnimation from '../animation/RevealAnimation';
 
 const RatesSection = ({ ratesSectionData }) => {

@@ -1,3 +1,5 @@
+'use client';
+
 
 import RevealAnimation from '../animation/RevealAnimation';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion';

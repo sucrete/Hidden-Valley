@@ -1,3 +1,5 @@
+'use client';
+
 import RevealAnimation from '../animation/RevealAnimation';
 import CTACheckList from './cta/CTACheckList';
 import CtaInputForm from './cta/CtaInputForm';

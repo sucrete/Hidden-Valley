@@ -1,3 +1,5 @@
+'use client';
+
 import { CheckIcon } from '@/icons';
 import Image from 'next/image';
 import RevealAnimation from '../animation/RevealAnimation';

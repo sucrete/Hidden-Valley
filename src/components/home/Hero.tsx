@@ -1,3 +1,5 @@
+'use client';
+
 import heroVectorImg from '@public/images/home-page-34/hero-vector.svg';
 import Image from 'next/image';
 import RevealAnimation from '../animation/RevealAnimation';
@@ -24,7 +26,7 @@ const Hero = async () => {
       <div className="temperature-pane hidden md:block absolute md:right-[6.25rem] md:bottom-[3rem]">
         {/* shadow-[0_20px_25px_-5px_rgba(0,0,0,0.08),0_10px_10px_-5px_rgba(0,0,0,0.02),inset_0_0_20px_rgba(236,236,236,0.18)] */}
         <RevealAnimation delay={0.3} direction='left' offset={5}>
-          <div className="overflow-hidden w-[160px] h-fit rounded-lg border-1 border-[#ffffff10] backdrop-blur-xl bg-[#ffffff1a] shadow-[0_20px_25px_-5px_rgba(0,0,0,0.08),0_10px_10px_-5px_rgba(0,0,0,0.02)]">
+          <div className="overflow-hidden w-[160px] h-fit rounded-lg border-1 border-[#ffffff10] backdrop-blur-xl bg-[#ffffff2c] shadow-[0_20px_25px_-5px_rgba(0,0,0,0.08),0_10px_10px_-5px_rgba(0,0,0,0.02)]">
             <div className="temp-wrapper text-center p-[20px_20px_18px_20px] w-fit">
               <div className="monospaced weather text-[#ffffff] pb-1 text-[10px]">{label}</div>
               <div className="temperature font-body flex justify-center text-accent mr-[-3px]">
@@ -42,13 +44,13 @@ const Hero = async () => {
           </div>
         </RevealAnimation>
       </div>
-      <div className="main-container center-it min-w-[90vw] md:min-w-[1290px]">
+      <div className="main-container center-it top-[54%] min-w-[90vw] md:min-w-[1290px]">
         <div className="text-center md:space-y-4 space-y-5">
           <RevealAnimation delay={0.1}>
             {/* 1. Relative Container for the "Stack" */}
             <div className="relative inline-block max-w-[90vw] md:max-w-[776px] mx-auto leading-[1.1] text-center overflow-visible h-fit">
               {/* 2. The Real Heading (Visible Gradient) */}
-              <h1 className="hero-heading bg-top bg-[length:100%_120%] text-accent text-[2.25rem] sm:text-[3rem] md:text-[4rem] -tracking-[.5px] font-[400] pb-[0.25em] -mb-[0.25em]">
+              <h1 className="hero-heading bg-top bg-[length:100%_120%] text-accent text-[2.25rem] sm:text-[3rem] md:text-[3.5rem] -tracking-[.5px] font-[400] pb-[0.25em] -mb-[0.25em]">
                 <HeadingContent />
               </h1>
 

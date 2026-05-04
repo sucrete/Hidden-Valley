@@ -21,6 +21,10 @@ Site Badges Styles
   @apply bg-[#ffeedc] dark:text-[#ff883b] dark:bg-accent/10;
 }
 
+@utility badge-basic {
+  @apply bg-ns-green-light off-black;
+}
+
 @utility badge-ns-green-light {
   @apply bg-ns-green-light;
 }
@@ -67,7 +71,7 @@ Site Badges Styles
   @apply bg-white text-secondary/60 font-semibold;
 }
 @utility badge-white-v3 {
-  @apply bg-white/60 text-[#b85800] dark:text-accent/60 dark:bg-accent/10;
+  @apply bg-white text-[#b85800] dark:text-accent/60 dark:bg-accent/10;
 }
 
 @utility badge-primary {
