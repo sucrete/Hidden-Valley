@@ -1,5 +1,3 @@
-'use client';
-
 import RevealAnimation from '@/components/animation/RevealAnimation';
 import { cn } from '@/utils/cn';
 import { HiddenValleyLogo } from '@/components/svg-components/HiddenValleyLogos';

@@ -152,6 +152,27 @@ table {
     hsla(0, 0%, 0%, 0.35) 100%
   );
 }
+@utility bg-scrim-hero {
+  background-image: linear-gradient(
+    to bottom,
+    hsl(0, 0%, 0%) 0%,
+    hsla(0, 0%, 0%, 0.847) 0.2%,
+    hsla(0, 0%, 0%, 0.712) 1%,
+    hsla(0, 0%, 0%, 0.593) 2.3%,
+    hsla(0, 0%, 0%, 0.49) 4.4%,
+    hsla(0, 0%, 0%, 0.402) 7.3%,
+    hsla(0, 0%, 0%, 0.326) 11%,
+    hsla(0, 0%, 0%, 0.264) 15.7%,
+    hsla(0, 0%, 0%, 0.212) 21.5%,
+    hsla(0, 0%, 0%, 0.171) 28.5%,
+    hsla(0, 0%, 0%, 0.139) 36.7%,
+    hsla(0, 0%, 0%, 0.115) 46.3%,
+    hsla(0, 0%, 0%, 0.098) 57.3%,
+    hsla(0, 0%, 0%, 0.087) 69.9%,
+    hsla(0, 0%, 0%, 0.082) 84.1%,
+    hsla(0, 0%, 0%, 0.08) 100%
+  );
+}
 
 @layer components {
   .table-preface {
@@ -564,19 +585,21 @@ Common Styles all over the sites
   ul {
     @apply space-y-4;
     li {
-      @apply text-tagline-1 dark:text-accent before:relative before:left-0 before:mr-3 before:h-5 before:w-5 before:content-[url('/images/icons/checkmark-white.svg')] before:max-md:top-0 before:md:top-1 dark:before:content-[url('/images/icons/checkmark-white.svg')];
+      @apply text-tagline-1 dark:text-accent before:relative before:left-0 before:mr-3 before:h-5 before:w-5 before:max-md:top-0 before:md:top-1;
+      &::before {
+        content: url('/images/icons/checkmark-white.svg');
+      }
     }
   }
   ol {
     @apply space-y-4;
-    li:first-child {
-      @apply text-tagline-1 dark:text-accent font-medium before:relative before:top-1 before:left-0 before:mr-3 before:h-5 before:w-5 before:content-[url('/images/icons/checkmark-white.svg')] dark:before:content-[url('/images/icons/checkmark-white.svg')];
-    }
-    li:nth-child(2) {
-      @apply text-tagline-1 dark:text-accent font-medium before:relative before:top-1 before:left-0 before:mr-3 before:h-5 before:w-5 before:content-[url('/images/icons/checkmark-white.svg')] dark:before:content-[url('/images/icons/checkmark-white.svg')];
-    }
+    li:first-child,
+    li:nth-child(2),
     li:last-child {
-      @apply text-tagline-1 dark:text-accent font-medium before:relative before:top-1 before:left-0 before:mr-3 before:h-5 before:w-5 before:content-[url('/images/icons/checkmark-white.svg')] dark:before:content-[url('/images/icons/checkmark-white.svg')];
+      @apply text-tagline-1 dark:text-accent font-medium before:relative before:top-1 before:left-0 before:mr-3 before:h-5 before:w-5;
+      &::before {
+        content: url('/images/icons/checkmark-white.svg');
+      }
     }
   }
 }

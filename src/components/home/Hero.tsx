@@ -1,5 +1,3 @@
-'use client';
-
 import heroVectorImg from '@public/images/home-page-34/hero-vector.svg';
 import Image from 'next/image';
 import RevealAnimation from '../animation/RevealAnimation';
@@ -21,7 +19,7 @@ const Hero = async () => {
     // saved classNames ->  h-[99svh] xl:max-h-[90svh]
     <section className="bg-cover bg-[url('/images/hero-images/hidden-1.jpg')] bg-top bg-no-repeat relative z-20 h-[600px] md:h-[99svh]">
       <ParallaxImageBackground src="/images/hero-images/hidden-1.jpg" />
-      <div className="bg-black top-0 left-0 absolute h-[100%] w-[100%] opacity-25 -z-1"></div>
+      <div className="top-0 left-0 absolute h-[100%] w-[100%] opacity-70 -z-1 bg-scrim-hero"></div>
 
       <div className="temperature-pane hidden md:block absolute md:right-[6.25rem] md:bottom-[3rem]">
         {/* shadow-[0_20px_25px_-5px_rgba(0,0,0,0.08),0_10px_10px_-5px_rgba(0,0,0,0.02),inset_0_0_20px_rgba(236,236,236,0.18)] */}

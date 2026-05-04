@@ -32,8 +32,6 @@ interface LinkCardProps {
 }
 
 const LinkCard = ({ linkItem }: LinkCardProps) => {
-  const slotA = useRef<HTMLSpanElement>(null);
-  const slotB = useRef<HTMLSpanElement>(null);
   const arrowRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
@@ -41,55 +39,13 @@ const LinkCard = ({ linkItem }: LinkCardProps) => {
   }, []);
 
   const handleMouseEnter = () => {
-    gsap.to(slotA.current, {
-      y: -20,
-      rotateX: 45,
-      opacity: 0,
-      duration: 0.2,
-      ease: 'power3.in',
-      transformOrigin: 'center bottom',
-    });
-    gsap.fromTo(
-      slotB.current,
-      { y: 20, rotateX: -45, opacity: 0 },
-      {
-        y: 0,
-        rotateX: 0,
-        opacity: 1,
-        duration: 0.4,
-        ease: 'back.out(1.4)',
-        delay: 0.15,
-        transformOrigin: 'center top',
-      },
-    );
-    gsap.to(arrowRef.current, { rotate: 0, duration: 0.4, ease: 'back.out(1.4)', delay: 0.15 });
+    gsap.to(arrowRef.current, { rotate: 0, duration: 0.3, ease: 'back.out(1.4)' });
   };
 
   const handleMouseLeave = () => {
-    gsap.to(slotB.current, {
-      y: 20,
-      rotateX: -45,
-      opacity: 0,
-      duration: 0.2,
-      ease: 'power3.in',
-      transformOrigin: 'center top',
-    });
-    gsap.fromTo(
-      slotA.current,
-      { y: -20, rotateX: 45, opacity: 0 },
-      {
-        y: 0,
-        rotateX: 0,
-        opacity: 1,
-        duration: 0.4,
-        ease: 'back.out(1.4)',
-        delay: 0.15,
-        transformOrigin: 'center bottom',
-      },
-    );
-    gsap.to(arrowRef.current, { rotate: -45, duration: 0.4, ease: 'back.out(1.4)', delay: 0.15 });
+    gsap.to(arrowRef.current, { rotate: -45, duration: 0.3, ease: 'back.out(1.4)' });
   };
-  const HOVER_DURATION = 'duration-300';
+  const HOVER_DURATION = 'duration-200';
   return (
     <Link href={linkItem.URL} className="block group">
       <div
@@ -99,29 +55,24 @@ const LinkCard = ({ linkItem }: LinkCardProps) => {
         {/* LAYER 1: Background Image & Dark Overlay */}
         <div className="absolute inset-0 z-0">
           <div
-            className={`overlay absolute inset-0 bg-scrim-bottom rounded-[12px] transition-opacity ${HOVER_DURATION} group-hover:opacity-50 z-10`}
+            className={`overlay absolute inset-0 bg-scrim-bottom opacity-70 rounded-[12px] transition-opacity ${HOVER_DURATION} group-hover:opacity-70 z-10`}
           />
           <div
-            className={`the-bg-image bg-cover bg-center absolute inset-0 transition-transform ${HOVER_DURATION} ease-out`}
+            className={`the-bg-image bg-cover bg-center absolute inset-0 transition-transform ${HOVER_DURATION} ease-out group-hover:scale-[1.03]`}
             style={{ backgroundImage: `url(${linkItem.imgURL})` }}
           />
         </div>
 
         {/* LAYER 2: The Content */}
         <div className="w-full h-full px-5 pb-4 md:px-6 md:pb-5 flex items-end justify-start relative z-30">
-          <div className="link-title relative overflow-hidden h-[1.5em] w-full" style={{ perspective: '450px' }}>
-            <span
-              ref={slotA}
-              className="absolute bottom-0 left-0 text-white semibold tracking-normal text-[15px] md:text-[16px] lg:text-[16px] whitespace-nowrap">
-              {linkItem.text}
-            </span>
-            <span
-              ref={slotB}
-              className="absolute bottom-0 left-0 text-white semibold text-[15px] md:text-[16px] lg:text-[16px] whitespace-nowrap opacity-0">
+          <div className="link-title relative h-[1.5em] w-full">
+            <span className="absolute bottom-0 left-0 text-white tracking-normal text-[15px] md:text-[16px] lg:text-[16px] whitespace-nowrap">
               {linkItem.text}
             </span>
             <span ref={arrowRef} className="absolute bottom-0 right-0 -mb-1">
-              <SmallArrow className="size-7 fill-white" />
+              <SmallArrow
+                className={`size-7 transition-opacity opacity-70 fill-[#fff] ${HOVER_DURATION} group-hover:opacity-100`}
+              />
             </span>
           </div>
         </div>
