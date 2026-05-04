@@ -1,3 +1,5 @@
+'use client';
+
 import RevealAnimation from '../animation/RevealAnimation';
 
 import ParallaxImageBackground from './ParallaxImageBackground';
