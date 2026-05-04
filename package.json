@@ -36,7 +36,9 @@
     "react-masonry-css": "^1.0.16",
     "react-range-slider-input": "^3.3.3",
     "rehype-slug": "^6.0.0",
+    "sanity": "^5.23.0",
     "sanity-plugin-media": "^4.1.1",
+    "styled-components": "^6.4.1",
     "swiper": "^11.2.10"
   },
   "devDependencies": {
