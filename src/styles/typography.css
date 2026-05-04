@@ -1,0 +1,7 @@
+/* =========================
+Default Body and Typography styles
+=========================== */
+body {
+  @apply font-body font-medium antialiased [&_>_:not(h1,h2,h3,h4,h5,h6)]:tracking-[-.25px] [&_>_:not(h1,h2,h3,h4,h5,h6)]:font-[400];
+ 
+}
