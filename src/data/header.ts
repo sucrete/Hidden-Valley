@@ -167,12 +167,6 @@ export const splitMenuLeft: NavigationItem[] = [
     href: '/course',
     hasDropdown: false,
   },
-  {
-    id: 'lessons',
-    label: 'Lessons',
-    href: '/lessons',
-    hasDropdown: false,
-  },
 ];
 
 export const splitMenuRight: NavigationItem[] = [

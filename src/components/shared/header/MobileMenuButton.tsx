@@ -1,20 +1,28 @@
 'use client';
 
 import { useMobileMenuContext } from '@/context/MobileMenuContext';
+import { cn } from '@/utils/cn';
 
-const MobileMenuButton = () => {
+interface MMButtonProps {
+  className?: string;
+}
+
+const MobileMenuButton = ({ className = '' }: MMButtonProps) => {
   const { openMenu } = useMobileMenuContext();
 
   return (
     <div className="block xl:hidden">
       <button
         onClick={openMenu}
-        className="nav-hamburger bg-background-4 dark:bg-background-6 hover:bg-background-5 dark:hover:bg-background-7 flex size-12 cursor-pointer flex-col items-center justify-center gap-[5px] rounded-full transition-all duration-200 hover:scale-105 group"
+        className={cn(
+          'nav-hamburger relative bg-transparent sm:bg-background-4 sm:hover:bg-ns-dark-green flex size-10 sm:size-12 cursor-pointer flex-col items-center justify-center gap-[5px] rounded-full transition-all duration-200 group',
+          className,
+        )}
         aria-label="Open mobile menu">
         <span className="sr-only">Menu</span>
-        <span className="bg-stroke-9 group-hover:bg-stroke-1 dark:bg-stroke-1 block h-0.5 w-6 transition-all duration-200"></span>
-        <span className="bg-stroke-9 group-hover:bg-stroke-1 dark:bg-stroke-1 block h-0.5 w-6 transition-all duration-200"></span>
-        <span className="bg-stroke-9 group-hover:bg-stroke-1 dark:bg-stroke-1 block h-0.5 w-6 transition-all duration-200"></span>
+        {[0, 1, 2].map((i) => (
+          <span key={i} className="nav-hamburger-bar block h-[1.5px] w-6" />
+        ))}
       </button>
     </div>
   );

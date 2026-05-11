@@ -34,6 +34,11 @@ Sidebar and header animations
 .nav-hamburger span,
 .nav-hamburger-close span {
   @apply transition-all duration-200 ease-in-out;
+  background-color: var(--color-accent);
+}
+
+.header-scrolled .nav-hamburger span {
+  background-color: #070b10;
 }
 
 /* Smooth transitions for mobile menu */

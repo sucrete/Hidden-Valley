@@ -31,5 +31,5 @@ export const deskStructure = (S) =>
       S.listItem()
         .icon(NoticeIcon)
         .title('Notices')
-        .child(S.document().schemaType('ticker').documentId('ticker').title('Ticker')),
+        .child(S.document().schemaType('ticker').documentId('ticker').title('Notices')),
     ]);

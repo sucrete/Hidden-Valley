@@ -9,11 +9,7 @@ const Hero = async () => {
   const data = await fetchWeather();
   const currentTemp = data ? Math.round(data.current.temperature_2m) : '--';
   const label = data ? getWeatherLabel(data.current.weather_code, data.current.wind_speed_10m) : '';
-  const HeadingContent = () => (
-    <>
-      A peaceful, secluded course in historic Cottage Grove.
-    </>
-  );
+  const HeadingContent = () => <>A peaceful, secluded course in historic Cottage Grove.</>;
 
   return (
     // saved classNames ->  h-[99svh] xl:max-h-[90svh]
@@ -23,8 +19,8 @@ const Hero = async () => {
 
       <div className="temperature-pane hidden md:block absolute md:right-[6.25rem] md:bottom-[3rem]">
         {/* shadow-[0_20px_25px_-5px_rgba(0,0,0,0.08),0_10px_10px_-5px_rgba(0,0,0,0.02),inset_0_0_20px_rgba(236,236,236,0.18)] */}
-        <RevealAnimation delay={0.3} direction='left' offset={5}>
-          <div className="overflow-hidden w-[160px] h-fit rounded-lg border-1 border-[#ffffff10] backdrop-blur-xl bg-[#ffffff2c] shadow-[0_20px_25px_-5px_rgba(0,0,0,0.08),0_10px_10px_-5px_rgba(0,0,0,0.02)]">
+        <RevealAnimation delay={0.3} direction="right" offset={15}>
+          <div className="overflow-hidden w-[175px] h-fit rounded-lg border-1 border-[#ffffff10] backdrop-blur-xl bg-[#ffffff2c] shadow-[0_20px_25px_-5px_rgba(0,0,0,0.08),0_10px_10px_-5px_rgba(0,0,0,0.02)]">
             <div className="temp-wrapper text-center p-[20px_20px_18px_20px] w-fit">
               <div className="monospaced weather text-[#ffffff] pb-1 text-[10px]">{label}</div>
               <div className="temperature font-body flex justify-center text-accent mr-[-3px]">
@@ -48,7 +44,19 @@ const Hero = async () => {
             {/* 1. Relative Container for the "Stack" */}
             <div className="relative inline-block max-w-[90vw] md:max-w-[776px] mx-auto leading-[1.1] text-center overflow-visible h-fit">
               {/* 2. The Real Heading (Visible Gradient) */}
-              <h1 className="hero-heading bg-top bg-[length:100%_120%] text-accent text-[2.25rem] sm:text-[3rem] md:text-[3.5rem] -tracking-[.5px] font-[400] pb-[0.25em] -mb-[0.25em]">
+              <h1
+                className="hero-heading text-[1.75rem] sm:text-[3rem] md:text-[3.5rem] -tracking-[.5px] font-[400] pb-[0.25em] -mb-[0.25em]"
+                style={{
+                  background: '#ffffff',
+                  backgroundImage:
+                    'linear-gradient(147deg, #ffffff 0%, #f7f7f7 25%, #efefef 50%, #e8e8e8 75%, #e0e0e0 100%)',
+                  // textShadow: '0 0 45px white',
+                  backgroundClip: 'text',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  WebkitBoxDecorationBreak: 'clone',
+                  boxDecorationBreak: 'clone',
+                }}>
                 <HeadingContent />
               </h1>
 
@@ -95,8 +103,6 @@ const Hero = async () => {
           </div>
         </RevealAnimation> */}
       </div>
-
-    
     </section>
   );
 };

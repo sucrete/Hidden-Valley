@@ -5,7 +5,7 @@ import { splitMenuLeft, splitMenuRight } from '@/data/header';
 import { cn } from '@/utils/cn';
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';
-import { BushwoodLogoScript } from '../svg-components/BushwoodLogos';
+import NavCTAButton from './header/NavCTAButton';
 
 const MobileMenu = () => {
   const { isOpen, closeMenu } = useMobileMenuContext();
@@ -43,19 +43,21 @@ const MobileMenu = () => {
 
       <nav className="flex-1 overflow-y-auto px-6 sm:px-8">
         <ul>
-          {splitMenuLeft.map((item) => (
-            <li key={item.id} className="border-b border-black/8">
-              <Link
-                href={item.href!}
-                onClick={closeMenu}
-                className="block py-3 text-[14px] text-black/60 hover:text-black transition-colors">
-                {item.label}
-              </Link>
-            </li>
-          ))}
+          {splitMenuLeft
+            .filter((item) => !item.hasDropdown)
+            .map((item) => (
+              <li key={item.id}>
+                <Link
+                  href={item.href!}
+                  onClick={closeMenu}
+                  className="block py-3 text-[14px] text-black/60 hover:text-black transition-colors">
+                  {item.label}
+                </Link>
+              </li>
+            ))}
 
           {splitMenuRight.map((item) => (
-            <li key={item.id} className="border-b border-black/8">
+            <li key={item.id}>
               <Link
                 href={item.href!}
                 onClick={closeMenu}
@@ -65,11 +67,16 @@ const MobileMenu = () => {
             </li>
           ))}
         </ul>
-      </nav>
 
-      <div className="px-6 sm:px-8 pt-8 pb-8">
-        <BushwoodLogoScript className="bushwood-logo-is-scrolled w-[50%] mx-auto block" />
-      </div>
+        <div className="pb-6 sm:pb-8 pt-4">
+          <NavCTAButton
+            href="/book-tee-time"
+            className="flex"
+            btnClassName="btn-header-bushwood hover:btn-white-dark w-full justify-center"
+            label="Book Tee Time"
+          />
+        </div>
+      </nav>
     </aside>
   );
 };

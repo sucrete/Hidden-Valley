@@ -4,19 +4,14 @@ import Springer from '@/utils/springer';
 import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import React, { ReactElement, Ref, cloneElement, useRef } from 'react';
+import { ReactNode, useRef } from 'react';
 
-// Register GSAP plugins
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
 }
 
 interface RevealAnimationProps {
-  children: ReactElement<{
-    className?: string;
-    ref?: Ref<HTMLElement>;
-    'data-ns-animate'?: boolean;
-  }>;
+  children: ReactNode;
   duration?: number;
   delay?: number;
   offset?: number;
@@ -44,8 +39,7 @@ const RevealAnimation = ({
   animationType = 'from',
   className = '',
 }: RevealAnimationProps) => {
-
-  const elementRef = useRef<HTMLElement>(null);
+  const elementRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
     const element = elementRef.current;
@@ -54,7 +48,6 @@ const RevealAnimation = ({
     const spring = useSpring ? Springer.default(0.2, 0.8) : null;
     const ease = useSpring && spring ? spring : 'power2.out';
 
-    // 1. Define the "FROM" state
     const fromVars = {
       opacity: 0.01,
       x: direction === 'left' ? -offset : direction === 'right' ? offset : 0,
@@ -62,7 +55,6 @@ const RevealAnimation = ({
       rotation: rotation,
     };
 
-    // 2. Define the "TO" state (The final visible state)
     const toVars = {
       opacity: 1,
       x: 0,
@@ -70,44 +62,34 @@ const RevealAnimation = ({
       rotation: 0,
       duration: duration,
       delay: delay,
-      immediateRender: false,
       ease: ease,
-      // 3. Add ScrollTrigger here
       scrollTrigger: !instant
         ? {
             trigger: element,
             start: start,
             end: end,
-            toggleActions: 'play none none none', // Ensures it plays and stays played
-            once: true, // This is key for lists - it won't flicker or get stuck if you scroll fast
-            // markers: true, // 👈 ADD THIS TEMPORARILY
+            toggleActions: 'play none none none',
+            once: true,
           }
         : undefined,
     };
-    
 
-    // 4. Execute the fromTo
     gsap.fromTo(element, fromVars, toVars);
 
     if (!instant) {
-      // Refreshing ScrollTrigger ensures GSAP recalculates 
-      // where the 'wrapped' items actually sit in the DOM.
       ScrollTrigger.refresh();
     }
   }, [duration, delay, offset, instant, start, end, direction, useSpring, rotation, animationType]);
 
-  // Early return if children is not valid (after all hooks)
-  if (!children || !React.isValidElement(children)) {
-    console.warn('RevealAnimation: Invalid children prop provided');
-    return null;
-  }
-
-  // Clone the child element and add the ref, className, and data-ns-animate attribute
-  return cloneElement(children, {
-    ref: elementRef,
-    className: cn(children?.props?.className, className),
-    'data-ns-animate': true,
-  });
+  return (
+    <div
+      ref={elementRef}
+      data-ns-animate={true}
+      className={cn(className) || undefined}
+    >
+      {children}
+    </div>
+  );
 };
 
 export default RevealAnimation;

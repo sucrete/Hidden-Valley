@@ -23,7 +23,7 @@ const Home = async () => {
         <Hero />
         <Links />
         <CourseIntro />
-        <BigPic src="/images/hero-images/hidden-2.jpg" info="Putting green at Hole 12" />
+        <BigPic src="/images/hero-images/hidden-2.jpg" info="The Green at Hole 6" />
        
         {/* <NewsletterSignup inputFieldClass="placeholder:text-black/70 focus:border-black bg-accent" /> */}
       </main>

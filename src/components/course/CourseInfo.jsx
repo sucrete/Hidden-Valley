@@ -23,9 +23,8 @@ const CourseInfo = () => {
               Charming, peaceful and secluded, but don't let the serenity fool you. With two par fives in the first four
               holes, you'll soon know you're in for a golfing challenge. Nestled along the northern slope of Mount
               David, this historic ten-hole course is home to gigantic old oak trees and bounded by Bennet Creek and the
-              Coastal Willamette river. The atmosphere at Hidden Valley is relaxed and friendly. Dan Nord, the
-              owner/operator is often found out on the course giving specialized care to its playability which, as
-              golfers attest, just keeps improving. USGA Rules Govern All Play.
+              Coastal Willamette river. Family-operated since 2001, we pride ourselves on our relaxed and friendly
+              atmosphere here at Hidden Valley. USGA Rules Govern All Play.
             </p>
           </RevealAnimation>
         </div>

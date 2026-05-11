@@ -56,7 +56,7 @@ export default function NoticeTicker({ isScrolled, notices, visible }: NoticeTic
   return (
     <div
       ref={barRef}
-      className="fixed top-0 left-0 w-full z-[51] bg-ns-dark-green text-white text-[12px] tracking-wide monospaced h-[36px] flex items-center justify-center overflow-hidden">
+      className="fixed top-0 left-0 w-full z-[51] bg-ns-dark-green text-white leading-[1.3] tracking-wide monospaced h-[36px] flex items-center justify-center overflow-hidden">
       <div className="relative h-full flex items-center justify-center w-full">
         <span ref={slotA} className="absolute w-full text-center px-4">{notices[0]}</span>
         <span ref={slotB} className="absolute w-full text-center px-4 opacity-0">{notices[1]}</span>

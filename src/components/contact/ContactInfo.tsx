@@ -1,21 +1,19 @@
 'use client';
 
-
-
 import Image from 'next/image';
 import Link from 'next/link';
 import RevealAnimation from '../animation/RevealAnimation';
-import Map from '../shared/Map'
+import Map from '../shared/Map';
 // const DirectionsCircle = () => {
 //   return (
-    
+
 //   )
 // }
 const contactInfoItems = [
   {
     id: 1,
     src: '/images/contact/addy.svg',
-    imageSize: {w: 22, h:22},
+    imageSize: { w: 22, h: 22 },
     title: 'Our Address',
     content: ' 775 N River Rd, Cottage Grove, OR 97424',
     link: 'https://maps.app.goo.gl/AWegNoEJFkFcmEuu6',
@@ -23,7 +21,7 @@ const contactInfoItems = [
   {
     id: 2,
     src: '/images/contact/email-me.svg',
-    imageSize: {w: 22, h:22},
+    imageSize: { w: 22, h: 22 },
     title: 'Email Us',
     content: 'dan@playhiddenvalleygolf.com',
     link: 'mailto:dan@playhiddenvalleygolf.com',
@@ -31,14 +29,12 @@ const contactInfoItems = [
   {
     id: 3,
     src: '/images/contact/call-me.svg',
-    imageSize: {w: 22, h:22},
+    imageSize: { w: 22, h: 22 },
     title: 'Call Us',
     content: '(541) 942-3046',
     link: 'tel:5419423046',
   },
 ];
-
-
 
 const ContactInfo = () => {
   return (
@@ -53,11 +49,8 @@ const ContactInfo = () => {
               <div className="badge badge-coral text-[#b85800]">Connect with us</div>
             </RevealAnimation> */}
             <RevealAnimation delay={0.3}>
-              <h2>
-                Get directions or reach out to us.
-              </h2>
+              <h2>Get directions or reach out to us.</h2>
             </RevealAnimation>
-
           </div>
           <div className="flex lg:items-stretch flex-col justify-center items-center gap-10 lg:flex-row lg:gap-8 xl:gap-10">
             {/* contact info cards  */}
@@ -66,12 +59,20 @@ const ContactInfo = () => {
                 <RevealAnimation key={item.id} delay={0.4}>
                   <div className="bg-accent dark:bg-background-6 rounded-[20px] p-11 space-y-6 w-full md:max-w-[371px] text-center relative overflow-hidden">
                     <figure className="size-10 overflow-hidden mx-auto">
-                      <Image src={item.src} alt='' width={item.imageSize.w} height={item.imageSize.h} className="size-full object-cover" />
+                      <Image
+                        src={item.src}
+                        alt=""
+                        width={item.imageSize.w}
+                        height={item.imageSize.h}
+                        className="size-full object-cover"
+                      />
                     </figure>
                     <div className="space-y-2.5">
                       <p className="text-heading-6 text-black">{item.title}</p>
                       <p className="text-black/60 transition-color duration-300 ease-in-out hover:text-black">
-                        <Link href={item.link} target='_blank'>{item.content}</Link>
+                        <Link href={item.link} target="_blank">
+                          {item.content}
+                        </Link>
                       </p>
                     </div>
                   </div>
@@ -80,13 +81,13 @@ const ContactInfo = () => {
             </div>
             {/* contact form  */}
             <div className="second-column flex-1 self-stretch min-h-0 w-full max-w-[847px]">
-            <RevealAnimation delay={0.3}>
-               <div className="rounded-[20px] bg-white dark:bg-background-6 p-2.5 w-full h-full">
-              <div className="w-full h-full overflow-hidden rounded-2xl">
-                <Map />
-              </div>
-            </div>
-            </RevealAnimation>
+              <RevealAnimation delay={0.3} className='h-full'>
+                <div className="rounded-[20px] bg-white dark:bg-background-6 p-2.5 w-full h-full">
+                  <div className="w-full h-full overflow-hidden rounded-2xl">
+                    <Map />
+                  </div>
+                </div>
+              </RevealAnimation>
             </div>
           </div>
         </div>

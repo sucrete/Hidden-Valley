@@ -1,24 +1,24 @@
 export default {
-  title: 'Ticker',
+  title: 'Notices',
   name: 'ticker',
   type: 'document',
   preview: {
     prepare() {
       return {
-        title: 'Ticker',
+        title: 'Notices',
       };
     },
   },
   fields: [
     { 
       name: 'tickerQuestion',
-      title: 'Display Ticker?',
+      title: 'Display Notices?',
       type: 'boolean',
       initialValue: false,
     },
     {
       name: 'tickerArray',
-      title: 'Ticker Content',
+      title: 'Notices Content',
       type: 'array',
       of: [{ type: 'string' }],
       hidden: ({ document }) => !document?.tickerQuestion,

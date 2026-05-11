@@ -1,12 +1,11 @@
 'use client';
+import { cn } from '@/utils/cn';
 
 import { CheckIcon } from '@/icons';
 import Image from 'next/image';
 import RevealAnimation from '../animation/RevealAnimation';
 import whiteAndBlueFlags from '@public/images/course/white-and-blue-flags.svg';
 import redAndGoldFlags from '@public/images/course/red-and-gold.svg';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion';
-import LinkButton from '../ui/button/LinkButton';
 
 // About list data
 const RulesData = [
@@ -22,9 +21,9 @@ const RulesData = [
 ];
 
 const EtiquetteData = [
-  { id: 1, text: 'Replace divots' },
-  { id: 2, text: ' Repair ball marks on greens' },
-  { id: 3, text: 'Pond on #1 & #4 - red stakes.' },
+  { id: 1, text: 'Replace divots.' },
+  { id: 2, text: 'Repair ball marks on greens.' },
+  { id: 3, text: 'Be mindful of maintenance personnel on the course.' },
 ];
 
 const Rules = () => {
@@ -36,14 +35,32 @@ const Rules = () => {
             <div className="flex first-column flex-col gap-8 lg:col-span-2 md:flex-row lg:flex-col">
               <RevealAnimation delay={0.1}>
                 <div className="bg-accent dark:bg-background-6 rounded-[20px] p-10 w-full md:max-w-[371px] text-center relative overflow-hidden">
-                  <p className=" text-black"><Image src={whiteAndBlueFlags} className='size-4 inline-block mr-2 -mt-[3px]' width={25} height={25} alt=''/>Men (white and blue tees)</p>
+                  <p className=" text-black">
+                    <Image
+                      src={whiteAndBlueFlags}
+                      className="size-4 inline-block mr-2 -mt-[3px]"
+                      width={25}
+                      height={25}
+                      alt=""
+                    />
+                    Men (white and blue tees)
+                  </p>
                   <p className="off-black">Rating: 66.5</p>
                   <p className="off-black">Slope: 125</p>
                 </div>
               </RevealAnimation>
               <RevealAnimation delay={0.2}>
                 <div className="bg-accent dark:bg-background-6 rounded-[20px] p-10 w-full md:max-w-[371px] text-center relative overflow-hidden">
-                  <p className=" text-black"><Image src={redAndGoldFlags} className='size-4 inline-block mr-2 -mt-[3px]' width={25} height={25} alt=''/>Ladies (red and gold tees)</p>
+                  <p className=" text-black">
+                    <Image
+                      src={redAndGoldFlags}
+                      className="size-4 inline-block mr-2 -mt-[3px]"
+                      width={25}
+                      height={25}
+                      alt=""
+                    />
+                    Ladies (red and gold tees)
+                  </p>
                   <p className="off-black">Rating: 67.6</p>
                   <p className="off-black">Slope: 120</p>
                 </div>
@@ -53,12 +70,16 @@ const Rules = () => {
                   <p className=" text-accent mb-2">Please...</p>
                   {EtiquetteData.map((item) => (
                     <RevealAnimation key={item.id} delay={0.4 + item.id * 0.08}>
-                      <p className="text-accent/60 flex items-center gap-4 max-sm:gap-2.5 mb-1">
-                        <span className="size-5 rounded-full bg-[#ffffff18]">
-                          <CheckIcon className="fill-accent" />
-                        </span>
-                        {item.text}
-                      </p>
+                      <div className={cn('flex flex-row justify-start', item.id < 3 ? 'pb-2' : '')}>
+                        <div className="basis-[30px] shrink-0 flex pt-[3px]">
+                          <span className="size-5 rounded-full bg-[#ffffff18] block">
+                            <CheckIcon className="fill-accent" />
+                          </span>
+                        </div>
+                        <div className="grow">
+                          <p className="text-accent/60 flex items-center gap-4 max-sm:gap-2.5 mb-1">{item.text}</p>
+                        </div>
+                      </div>
                     </RevealAnimation>
                   ))}
                 </div>
@@ -66,18 +87,22 @@ const Rules = () => {
             </div>
             <div className="second-col lg:col-span-4 bg-accent dark:bg-background-6 rounded-[20px] p-11 w-full">
               <h5 className="text-black max-sm:text-heading-6 mb-8">Local Rules</h5>
-              <ul className="space-y-5 max-sm:space-y-3">
+              <div className="space-y-5 max-sm:space-y-3">
                 {RulesData.map((item) => (
-                  <RevealAnimation key={item.id} delay={item.id * 0.08}>
-                    <li className="flex items-center gap-4 max-sm:gap-2.5">
-                      <span className="size-5 rounded-full bg-[#0000000e]">
-                        <CheckIcon className="fill-black" />
-                      </span>
-                      <span className="off-black max-sm:text-tagline-2">{item.text}</span>
-                    </li>
-                  </RevealAnimation>
+                   <RevealAnimation key={item.id} delay={0.4 + item.id * 0.08}>
+                      <div className={cn('flex flex-row justify-start', item.id < 3 ? 'pb-2' : '')}>
+                        <div className="basis-[30px] shrink-0 flex pt-[3px]">
+                          <span className="size-5 rounded-full bg-[#00000018] block">
+                            <CheckIcon className="fill-black" />
+                          </span>
+                        </div>
+                        <div className="grow">
+                          <p className="text-black flex items-center gap-4 max-sm:gap-2.5 mb-1">{item.text}</p>
+                        </div>
+                      </div>
+                    </RevealAnimation>
                 ))}
-              </ul>
+              </div>
             </div>
           </div>
         </div>

@@ -8,10 +8,7 @@ import { AppContextProvider } from '@/context/AppContext';
 import { sanityFetch } from '@/sanity/lib/live';
 import { TICKER_QUERY } from '@/sanity/lib/queries';
 
-import { DisableDraftMode } from '@/components/disable-draft-mode';
 import { SanityLive } from '@/sanity/lib/live';
-import { draftMode } from 'next/headers';
-import { VisualEditing } from 'next-sanity/visual-editing';
 
 import { generateMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
@@ -40,12 +37,6 @@ export default async function FrontendLayout({
         </ThemeProvider>
       </AppContextProvider>
       <SanityLive />
-      {(await draftMode()).isEnabled && (
-        <>
-          <DisableDraftMode />
-          <VisualEditing />
-        </>
-      )}
     </>
   );
 }

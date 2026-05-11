@@ -28,7 +28,7 @@ const FooterOne: FC<FooterOneProps> = ({ className, defaultTheme }) => {
         className,
       )}>
       <div className="main-container">
-        <div className="grid grid-cols-12 justify-between gap-x-0 gap-y-16 pt-16 pb-12 xl:pt-[6rem]">
+        <div className="grid grid-cols-12 justify-between gap-x-0 gap-y-15 md:gap-y-16 pt-16 pb-12 xl:pt-[6rem]">
           <div className="col-span-12 xl:col-span-4">
             <RevealAnimation delay={0.3}>
               <div className="max-w-[306px] flex flex-col items-center mx-auto xl:mx-0">
@@ -71,7 +71,7 @@ const FooterOne: FC<FooterOneProps> = ({ className, defaultTheme }) => {
               </div>
             </RevealAnimation>
           </div>
-          <div className="col-span-12 grid grid-cols-12 gap-x-0 gap-y-8 xl:col-span-8">
+          <div className="col-span-12 grid grid-cols-12 gap-x-0 gap-y-16 md:gap-y-8 xl:col-span-8">
             <div className="col-span-12 md:col-span-4">
               <RevealAnimation delay={0.4}>
                 <div className="space-y-5 flex flex-col items-center md:items-start">
@@ -132,7 +132,7 @@ const FooterOne: FC<FooterOneProps> = ({ className, defaultTheme }) => {
           </div>
         </div>
         <div className="relative pt-[35px] pb-[100px] text-center">
-          <RevealAnimation delay={0.7} offset={35} duration={3}>
+          <RevealAnimation delay={0.7} offset={5} duration={2}>
             <div>
               <HiddenValleyLogo className="fill-[#012d25]" />
             </div>

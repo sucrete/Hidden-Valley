@@ -16,7 +16,7 @@ const BigPic = ({src, info}: BigPicProps ) => {
         <div className="background-section opacity-25 absolute inset-0 -z-2 size-full bg-linear-[to_bottom,hsla(0,0%,0%,0)_0%,hsla(0,0%,0%,0.066)_15.3%,hsla(0,0%,0%,0.129)_28.4%,hsla(0,0%,0%,0.19)_39.7%,hsla(0,0%,0%,0.25)_49.2%,hsla(0,0%,0%,0.308)_57.3%,hsla(0,0%,0%,0.366)_64%,hsla(0,0%,0%,0.425)_69.6%,hsla(0,0%,0%,0.485)_74.4%,hsla(0,0%,0%,0.547)_78.5%,hsla(0,0%,0%,0.612)_82.1%,hsla(0,0%,0%,0.68)_85.4%,hsla(0,0%,0%,0.752)_88.6%,hsla(0,0%,0%,0.829)_92%,hsla(0,0%,0%,0.911)_95.7%,hsl(0,0%,0%)_100%]"></div>
         <ParallaxImageBackground src={src} />
         <div className="absolute bottom-5 left-5 md:bottom-[50px] md:left-[50px]">
-          <div className=" text-[#ffffffa5] monospaced">
+          <div className=" text-[#ffffffa5] monospaced flex">
             <RevealAnimation delay={0.3} offset={7}>
               <span className="green-circle size-[9px] bg-ns-green rounded-full inline-block mr-2 -mb-[1px]"></span>
             </RevealAnimation>

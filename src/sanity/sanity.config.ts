@@ -2,12 +2,9 @@ import { schemaTypes } from '@/sanity/schemaTypes';
 import { defineConfig, isDev } from 'sanity';
 import { structureTool } from 'sanity/structure';
 import { visionTool } from '@sanity/vision';
-import { presentationTool } from 'sanity/presentation';
 import { media } from 'sanity-plugin-media';
 
 import { deskStructure } from './deskStructure';
-
-import { resolve } from './presentation/resolve';
 
 import './custom.css';
 
@@ -25,32 +22,12 @@ export default defineConfig({
           title: 'Content',
           structure: deskStructure,
         }),
-        presentationTool({
-          title: 'Visual Editor',
-          resolve,
-          previewUrl: {
-            origin: process.env.SANITY_STUDIO_PREVIEW_URL || 'http://localhost:3000',
-            previewMode: {
-              enable: '/api/draft-mode/enable',
-            },
-          },
-        }),
         visionTool(),
       ]
     : [
         structureTool({
           title: 'Content',
           structure: deskStructure,
-        }),
-        presentationTool({
-          title: 'Visual Editor',
-          resolve,
-          previewUrl: {
-            origin: process.env.SANITY_STUDIO_PREVIEW_URL || 'http://localhost:3000',
-            previewMode: {
-              enable: '/api/draft-mode/enable',
-            },
-          },
         }),
       ],
 
