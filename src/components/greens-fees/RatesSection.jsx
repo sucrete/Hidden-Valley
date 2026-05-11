@@ -8,12 +8,12 @@ const RatesSection = ({ ratesSectionData }) => {
   console.log(`%c${JSON.stringify(ratesSectionData, null, 2)}`, 'color: green');
 
   return (
-    <section className="rates-section py-[12rem] bg-background-2" id="rates">
+    <section className="rates-section pt-[5rem] md:pt-[9rem] lg:pt-[12rem] pb-[9rem] md:pb-[9rem] lg:pb-[12rem] bg-background-2" id="rates">
       <div className="main-container">
         <RevealAnimation delay={0.1}>
           <div className="table-wrapper">
             <div className="table-preface pb-5">
-              <h3 className="font-serif lg:max-w-1/2 text-[3rem] pb-[.7rem]">{standard.standardRatesHeading}</h3>
+              <h3 className="font-serif lg:max-w-1/2 text-[1.75rem] sm:text-heading-3 md:text-[3rem] pb-[.7rem]">{standard.standardRatesHeading}</h3>
               {standard.standardRatesDescription && (
                 <p className="lg:max-w-1/2">{standard.standardRatesDescription} </p>
               )}
@@ -74,10 +74,10 @@ const RatesSection = ({ ratesSectionData }) => {
           </div>
         </RevealAnimation>
         <RevealAnimation delay={0.1}>
-          <div className="table-wrapper pt-[7rem]">
+          <div className="table-wrapper pt-[5rem] md:pt-[7rem]">
             <hr className="opacity-10 pb-[2rem]" />
             <div className="table-preface pb-5">
-              <h3 className="font-serif lg:max-w-1/2 text-[3rem] pb-[.7rem]">{misc.miscHeading}</h3>
+              <h3 className="font-serif lg:max-w-1/2 text-[1.75rem] sm:text-heading-3 md:text-[3rem] pb-[.7rem]">{misc.miscHeading}</h3>
               {misc.miscDescription?.length > 0 && <p className="lg:max-w-1/2">{misc.miscDescription} </p>}
             </div>
             <table className="table-auto table-striped table-striped-3">
@@ -147,10 +147,10 @@ const RatesSection = ({ ratesSectionData }) => {
         </RevealAnimation>
 
         <RevealAnimation delay={0.1}>
-          <div className="table-wrapper pt-[7rem]">
+          <div className="table-wrapper pt-[5rem] md:pt-[7rem]">
             <hr className="opacity-10 pb-[2rem]" />
             <div className="table-preface pb-5">
-              <h3 className="font-serif lg:max-w-1/2 text-[3rem] pb-[.7rem]">{golfPass.golfPassHeading}</h3>
+              <h3 className="font-serif lg:max-w-1/2 text-[1.75rem] sm:text-heading-3 md:text-[3rem] pb-[.7rem]">{golfPass.golfPassHeading}</h3>
               {golfPass.golfPassDescription?.length > 0 && (
                 <p className="lg:max-w-1/2">{golfPass.golfPassDescription} </p>
               )}

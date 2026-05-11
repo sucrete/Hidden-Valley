@@ -579,6 +579,18 @@ const FancyArrow = ({ className = 'fill-black' }: { className?: string }) => (
   </svg>
 );
 
+const HamburgerIcon = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 512 341.3"
+    fill="currentColor"
+    className={cn('w-full', className)}>
+    <rect x="0" y="0" width="512" height="30" />
+    <rect x="0" y="130" width="512" height="30" />
+    <rect x="118.6" y="260" width="393.4" height="30" />
+  </svg>
+);
+
 export {
   ArrowIcon,
   CalendarIcon,
@@ -594,6 +606,7 @@ export {
   GithubIcon,
   GradientStarIcon,
   GraphCheckIcon,
+  HamburgerIcon,
   LinkedinIcon,
   MessageIcon,
   NavigationArrow,

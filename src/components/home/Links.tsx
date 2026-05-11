@@ -83,7 +83,7 @@ const LinkCard = ({ linkItem }: LinkCardProps) => {
 
 const Links = () => {
   return (
-    <section className="py-6 md:py-20 lg:py-[70px] xl:py-[80px] relative bg-background-2">
+    <section className="py-7 md:py-20 lg:py-[70px] xl:py-[80px] relative bg-background-2">
       <div className="max-w-[1440px] mx-auto px-6 lg:px-16 ">
         <div className="rounded-[25px] md:rounded-[32px] overflow-hidden p-4 md:p-6 bg-[#ececec] shadow-[inset_1px_1px_0_rgba(255,255,255,0.75),inset_0_0_5px_rgba(255,255,255,0.75)]">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-6">

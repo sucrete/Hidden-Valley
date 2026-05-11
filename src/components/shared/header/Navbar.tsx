@@ -71,7 +71,7 @@ const NavbarFour = ({ className, btnClassName, notices = [], tickerVisible = fal
                 btnClassName={cn('btn-header-bushwood hover:btn-white-dark dark:hover:btn-white', btnClassName)}
                 label="Book Tee Time"
               />
-              <MobileMenuButton className={cn(isScrolled ? 'py-4' : 'py-1')} />
+              <MobileMenuButton className={cn(isScrolled ? 'py-4' : 'py-1')} isScrolled={isScrolled} />
             </div>
           </div>
         </div>
