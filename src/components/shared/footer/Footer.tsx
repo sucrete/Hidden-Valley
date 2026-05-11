@@ -37,18 +37,6 @@ const FooterOne: FC<FooterOneProps> = ({ className, defaultTheme }) => {
                 </figure></Link>
                 
                 <div className="flex items-center gap-3 mt-5">
-                  {/* <Link
-                    target="_blank"
-                    href="https://www.facebook.com/profile.php?id=100067837771001&locale=en_GB#"
-                    className="footer-social-link">
-                    <span className="sr-only">Facebook</span>
-                    <Image className="w-auto h-[15px]" src={facebook} alt="Facebook" />
-                  </Link> */}
-                  {/* <div className="bg-stroke-1/20 h-6 w-px"></div>
-                  <Link target="_blank" href="https://www.instagram.com" className="footer-social-link">
-                    <span className="sr-only">Instagram</span>
-                    <Image className="size-6" src={instagram} alt="Instagram" />
-                  </Link> */}
                 </div>
                 <p className="text-accent/60 text-tagline-1 mt-4 ">Open 7 days a week, 7am - 7pm.</p>
 

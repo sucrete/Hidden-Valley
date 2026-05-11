@@ -52,7 +52,7 @@ const WeatherModule = async () => {
 
   return (
     <div className="weather-container flex flex-row items-center pr-6 bg-[#001914] md:bg-[#001e18] p-2 ml-auto justify-between rounded-2xl">
-      <div className="today-weather-container basis-[50%] sm:basis-[35%] bg-[#01251e] text-accent flex flex-col px-6 py-4 rounded-[12px] items-center justify-between space-y-3 realistic-shadow-md border-1 border-[#66727012]">
+      <div className="today-weather-container basis-[55%] sm:basis-[35%] bg-[#01251e] text-accent flex flex-col px-6 py-4 rounded-[12px] items-center justify-between space-y-3 realistic-shadow-md border-1 border-[#66727012]">
         <div className="today-weather flex flex-col justify-between items-center space-y-3 w-full">
           <div className="weather text-[13px] flex flex-row items-center">
             <span className="flex text-ns-green">{label}</span>
@@ -67,7 +67,7 @@ const WeatherModule = async () => {
         <div className="weather-header text-ns-green text-[13px]">Cottage Grove, OR</div>
       </div>
 
-      <div className="flex flex-row justify-between w-[45%] sm:w-[60%]">
+      <div className="flex flex-row justify-between w-[40%] sm:w-[60%]">
         {forecast.map(({ day, hi, lo, Icon }: ForecastDay, index: number) => (
           <div
             key={day}
