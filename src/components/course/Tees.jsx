@@ -30,9 +30,9 @@ const blueTees = [
 
 const Tees = () => {
   return (
-    <section className="bg-background-4 dark:bg-background-7 pb-14 pt-14 md:pb-16 md:pt-16 lg:pb-[88px] lg:pt-[88px] xl:pb-[9rem] xl:pt-0">
+    <section className="bg-background-4 dark:bg-background-7 pb-14 md:pb-16 md:pt-16 lg:pb-[88px] lg:pt-[88px] xl:pb-[9rem] xl:pt-0">
       <div className="main-container">
-        <div className="accordion-container px-6 pb-10 max-sm:px-5 max-sm:py-8 md:px-11">
+        <div className="accordion-container pb-10 md:px-11">
           <RevealAnimation delay={0.4}>
             <div>
               <Accordion
@@ -77,7 +77,7 @@ const Tees = () => {
                 </AccordionItem>
               </Accordion>
               <Accordion
-                className="mx-auto w-full space-y-4 mt-5"
+                className="mx-auto w-full space-y-4 mt-6 md:mt-10"
                 defaultValue="1"
                 enableScrollAnimation={true}
                 animationDelay={0.1}>

@@ -9,6 +9,7 @@ export default function ParallaxImageBackground({
   alt = '',
   height = '120%',
   offset = '-10%',
+  sizes = '100vw',
 }: any) {
   const containerRef = useRef(null);
   const imageRef = useRef(null);
@@ -33,7 +34,7 @@ export default function ParallaxImageBackground({
         className="absolute inset-0 w-full"
         style={{ height, transform: `translateY(${offset})`, willChange: 'transform' }}
       >
-        <Image src={src} alt={alt} fill className="object-cover" priority />
+        <Image src={src} alt={alt} fill sizes={sizes} className="object-cover" priority />
       </div>
     </div>
   );

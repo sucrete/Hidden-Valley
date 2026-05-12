@@ -1,7 +1,7 @@
 import heroVectorImg from '@public/images/home-page-34/hero-vector.svg';
-import Image from 'next/image';
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
+import TemperaturePaneCard from './TemperaturePaneCard';
 import ParallaxImageBackground from '../ui/ParallaxImageBackground';
 import { fetchWeather, getWeatherLabel } from '@/utils/weather';
 
@@ -14,29 +14,12 @@ const Hero = async () => {
   return (
     // saved classNames ->  h-[99svh] xl:max-h-[90svh]
     <section className="bg-cover bg-[url('/images/hero-images/hidden-1.jpg')] bg-top bg-no-repeat relative z-20 h-[600px] md:h-[99svh]">
-      <ParallaxImageBackground src="/images/hero-images/hidden-1.jpg" />
+      <ParallaxImageBackground src="/images/hero-images/hidden-1.jpg" sizes="(max-width: 768px) 200vw, 100vw" />
       <div className="top-0 left-0 absolute h-[100%] w-[100%] opacity-70 -z-1 bg-scrim-hero"></div>
 
       <div className="temperature-pane hidden md:block absolute md:right-[6.25rem] md:bottom-[3rem]">
         {/* shadow-[0_20px_25px_-5px_rgba(0,0,0,0.08),0_10px_10px_-5px_rgba(0,0,0,0.02),inset_0_0_20px_rgba(236,236,236,0.18)] */}
-        <RevealAnimation delay={0.3} direction="right" offset={15}>
-          <div className="overflow-hidden w-[175px] h-fit rounded-lg border-1 border-[#ffffff10] backdrop-blur-xl bg-[#ffffff2c] shadow-[0_20px_25px_-5px_rgba(0,0,0,0.08),0_10px_10px_-5px_rgba(0,0,0,0.02)]">
-            <div className="temp-wrapper text-center p-[20px_20px_18px_20px] w-fit">
-              <div className="monospaced weather text-[#ffffff] pb-1 text-[10px]">{label}</div>
-              <div className="temperature font-body flex justify-center text-accent mr-[-3px]">
-                <span className="text-[40px] semibold leading-[1] tracking-[1.5px]">{currentTemp}</span>{' '}
-                <span className="text-[30px] leading-[1.15]">°</span>
-              </div>
-            </div>
-            <Image
-              src={'/images/home/oregon-graphic.svg'}
-              className="absolute right-[-35px] top-[10px] z-2"
-              alt=""
-              width={100}
-              height={90}
-            />
-          </div>
-        </RevealAnimation>
+        <TemperaturePaneCard currentTemp={currentTemp} label={label} />
       </div>
       <div className="main-container center-it top-[54%] min-w-[90vw] md:min-w-[1290px]">
         <div className="text-center md:space-y-4 space-y-5">

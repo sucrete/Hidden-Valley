@@ -17,7 +17,7 @@ const RulesData = [
   { id: 6, text: 'Avoid slow play. Please play ready golf. Invite faster players to play through.' },
   { id: 7, text: 'Keep golf carts 30 feet from tees and greens.' },
   { id: 8, text: 'Misuse of power carts will terminate play. No money refunded.' },
-  { id: 9, text: 'Each player must have golf clubs and a bag.' },
+  // { id: 9, text: 'Each player must have golf clubs and a bag.' },
 ];
 
 const EtiquetteData = [
@@ -28,11 +28,11 @@ const EtiquetteData = [
 
 const Rules = () => {
   return (
-    <section className="pt-14 md:pt-16 lg:pt-20 bg-background-4 dark:bg-background-5">
+    <section className=" md:pt-16 lg:pt-20 bg-background-4 dark:bg-background-5">
       <div className="main-container">
         <div className="relative z-10 col-span-12">
-          <div className="grid grid-cols-1 gap-10 px-6 pt-14 pb-10 max-sm:px-5 max-sm:py-8 md:px-11 lg:grid-cols-6 lg:gap-8">
-            <div className="flex first-column flex-col gap-8 lg:col-span-2 md:flex-row lg:flex-col">
+          <div className="grid grid-cols-1 gap-6 pt-14 pb-6 md:pb-10 md:px-11 lg:grid-cols-6 lg:gap-8">
+            <div className="flex first-column flex-col gap-6 md:gap-8 lg:col-span-2 md:flex-row lg:flex-col">
               <RevealAnimation delay={0.1}>
                 <div className="bg-accent dark:bg-background-6 rounded-[20px] p-10 w-full md:max-w-[371px] text-center relative overflow-hidden">
                   <p className=" text-black">
@@ -67,7 +67,7 @@ const Rules = () => {
               </RevealAnimation>
               <RevealAnimation delay={0.3}>
                 <div className="bg-ns-dark-green dark:bg-background-6 rounded-[20px] p-10 w-full md:max-w-[371px] relative overflow-hidden realistic-shadow-md border-1 border-[#ffffff44]">
-                  <p className=" text-accent mb-2">Please...</p>
+                  <p className=" text-accent pb-3">Please...</p>
                   {EtiquetteData.map((item) => (
                     <RevealAnimation key={item.id} delay={0.4 + item.id * 0.08}>
                       <div className={cn('flex flex-row justify-start', item.id < 3 ? 'pb-2' : '')}>

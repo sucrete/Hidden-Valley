@@ -23,6 +23,7 @@ interface RevealAnimationProps {
   rotation?: number;
   animationType?: 'from' | 'to';
   className?: string;
+  animateChild?: boolean;
 }
 
 const RevealAnimation = ({
@@ -38,12 +39,17 @@ const RevealAnimation = ({
   rotation = 0,
   animationType = 'from',
   className = '',
+  animateChild = false,
 }: RevealAnimationProps) => {
   const elementRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
     const element = elementRef.current;
     if (!element) return;
+
+    const target = animateChild
+      ? (element.firstElementChild as HTMLElement | null) ?? element
+      : element;
 
     const spring = useSpring ? Springer.default(0.2, 0.8) : null;
     const ease = useSpring && spring ? spring : 'power2.out';
@@ -74,12 +80,12 @@ const RevealAnimation = ({
         : undefined,
     };
 
-    gsap.fromTo(element, fromVars, toVars);
+    gsap.fromTo(target, fromVars, toVars);
 
     if (!instant) {
       ScrollTrigger.refresh();
     }
-  }, [duration, delay, offset, instant, start, end, direction, useSpring, rotation, animationType]);
+  }, [duration, delay, offset, instant, start, end, direction, useSpring, rotation, animationType, animateChild]);
 
   return (
     <div

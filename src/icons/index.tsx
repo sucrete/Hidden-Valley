@@ -582,7 +582,7 @@ const FancyArrow = ({ className = 'fill-black' }: { className?: string }) => (
 const HamburgerIcon = ({ className }: { className?: string }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 512 341.3"
+    viewBox="0 0 512 290"
     fill="currentColor"
     className={cn('w-full', className)}>
     <rect x="0" y="0" width="512" height="30" />

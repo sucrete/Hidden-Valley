@@ -8,7 +8,7 @@ interface LogoBoxProps {
 const LogoBox = ({ isScrolled }: LogoBoxProps) => {
   return (
     <div
-      className={`absolute left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] md:w-[300px] duration-400 ${isScrolled ? 'top-[52%] scale-100' : 'top-[55%] md:top-[60%] scale-100 md:scale-110'}`}>
+      className={`absolute left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] md:w-[300px] duration-400 ${isScrolled ? 'top-[52%] scale-100' : 'top-[55%] md:top-[50%] scale-100 md:scale-110'}`}>
       <Link href="/">
         <span className="sr-only">Home</span>
         <figure className="max-w-[100%] duration-500">

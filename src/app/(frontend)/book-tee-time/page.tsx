@@ -18,8 +18,8 @@ const BookTeeTime = () => {
     <Fragment>
       <main>
         <HalfHero
-          BGHeroSrc="/images/hero-images/aaa-golf-course-4.jpg"
-          imageOffset="-60%"
+          BGHeroSrc="/images/shared/bl-2.webp"
+          imageOffset="-40%"
           imageHeight="200%"
           overlayOpacity=".55"
           heroText="Book Tee Time"

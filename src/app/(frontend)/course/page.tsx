@@ -20,9 +20,9 @@ const Course = () => {
     <Fragment>
       <main>
         <HalfHero
-          BGHeroSrc="/images/shared/sunset-scene.webp"
-          imageOffset="-75%"
-          imageHeight="275%"
+          BGHeroSrc="/images/shared/bl-1.webp"
+          imageOffset="-25%"
+          imageHeight="200%"
           overlayOpacity=".25"
           heroText="Course"
         />

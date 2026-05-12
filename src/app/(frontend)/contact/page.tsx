@@ -19,8 +19,8 @@ const Contact = () => {
     <Fragment>
       <main>
         <HalfHero
-          BGHeroSrc="/images/shared/morning-view.webp"
-          imageOffset="-45%"
+          BGHeroSrc="/images/shared/bl-3.webp"
+          imageOffset="-25%"
           imageHeight="190%"
           overlayOpacity=".55"
           heroText="Contact Us"
