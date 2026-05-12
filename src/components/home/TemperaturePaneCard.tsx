@@ -37,7 +37,7 @@ const TemperaturePaneCard = ({ currentTemp, label }: TemperaturePaneCardProps) =
       </div>
       <Image
         src="/images/home/oregon-graphic.svg"
-        className="absolute right-[-35px] top-[10px] z-2"
+        className="absolute right-[-30px] top-[10px] z-2"
         alt=""
         width={100}
         height={90}

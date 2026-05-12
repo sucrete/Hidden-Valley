@@ -127,7 +127,7 @@ const FooterOne: FC<FooterOneProps> = ({ className, defaultTheme }) => {
           </RevealAnimation>
         </div>
       </div>
-      <ThemeToggle defaultTheme={defaultTheme} />
+      {/* <ThemeToggle defaultTheme={defaultTheme} /> */}
     </footer>
   );
 };

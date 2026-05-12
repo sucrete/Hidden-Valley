@@ -132,6 +132,7 @@ const MobileMenu = () => {
                 className="flex"
                 btnClassName="btn-header-bushwood hover:btn-white-dark w-full justify-center"
                 label="Book Tee Time"
+                onClick={closeMenu}
               />
             </div>
           </nav>
