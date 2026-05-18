@@ -18,7 +18,7 @@ const BookTeeTime = () => {
     <Fragment>
       <main>
         <HalfHero
-          BGHeroSrc="/images/shared/bl-2.webp"
+          BGHeroSrc="/images/hero-images/hv-2.webp"
           imageOffset="-40%"
           imageHeight="200%"
           overlayOpacity=".55"
