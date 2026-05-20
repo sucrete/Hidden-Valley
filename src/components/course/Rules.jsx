@@ -43,7 +43,7 @@ const Rules = () => {
                       height={25}
                       alt=""
                     />
-                    Men (white and blue tees)
+                    White and Blue Tees
                   </p>
                   <p className="off-black">Rating: 66.5</p>
                   <p className="off-black">Slope: 125</p>
@@ -59,7 +59,7 @@ const Rules = () => {
                       height={25}
                       alt=""
                     />
-                    Ladies (red and gold tees)
+                    Red and Gold Tees
                   </p>
                   <p className="off-black">Rating: 67.6</p>
                   <p className="off-black">Slope: 120</p>

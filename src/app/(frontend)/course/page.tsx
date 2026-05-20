@@ -27,8 +27,6 @@ const Course = () => {
           heroText="Course"
         />
         <CourseInfo />
-        {/* <CourseSlider/> */}
-        {/* <NewsletterSignup className='bg-[#f0f0f0]' inputFieldClass='placeholder:text-black/70 focus:border-black bg-accent'/> */}
         <Rules />
         <Tees />
       </main>
