@@ -7,7 +7,6 @@ import tickerType from './tickerType';
 // OBJECTS
 import golfPass from './objects/golfPass';
 import miscRates from './objects/miscRates';
-import punchCards from './objects/punchCards';
 import standardRates from './objects/standardRates';
 
 export const schemaTypes: SchemaTypeDefinition[] = [
@@ -17,6 +16,5 @@ export const schemaTypes: SchemaTypeDefinition[] = [
   // Objects
   golfPass,
   miscRates,
-  punchCards,
   standardRates,
 ];

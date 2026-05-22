@@ -32,12 +32,13 @@ const FooterOne: FC<FooterOneProps> = ({ className, defaultTheme }) => {
           <div className="col-span-12 xl:col-span-4">
             <RevealAnimation delay={0.3}>
               <div className="max-w-[306px] flex flex-col items-center mx-auto xl:mx-0">
-                <Link href='/'><figure className="max-w-[250px] mt-[5px]">
-                  <HiddenValleyLogo className="fill-white w-full h-auto" />
-                </figure></Link>
-                
-                <div className="flex items-center gap-3 mt-5">
-                </div>
+                <Link href="/">
+                  <figure className="max-w-[250px] mt-[5px]">
+                    <HiddenValleyLogo className="fill-white w-full h-auto" />
+                  </figure>
+                </Link>
+
+                <div className="flex items-center gap-3 mt-5"></div>
                 <p className="text-accent/60 text-tagline-1 mt-4 ">Open 7 days a week, 7am - 7pm.</p>
 
                 <div className=" flex flex-col text-center">
@@ -104,9 +105,11 @@ const FooterOne: FC<FooterOneProps> = ({ className, defaultTheme }) => {
 
               <div className="flex flex-col space-y-3 text-center md:text-right pt-[3rem]">
                 <RevealAnimation delay={0.7} offset={5} start="top 105%">
-                  <p className="text-tagline-1 text-accent/60">
-                    Copyright Hidden Valley Golf Course © {new Date().getFullYear()}
-                  </p>
+                  <Link href="/studio" className="" target='_blank'>
+                    <p className="text-tagline-1 text-accent/60">
+                      Copyright Hidden Valley Golf Course © {new Date().getFullYear()}
+                    </p>
+                  </Link>
                 </RevealAnimation>
 
                 <RevealAnimation delay={0.75} offset={5} start="top 105%">

@@ -5,7 +5,6 @@ export default {
   groups: [
     { name: 'standardRates', title: 'Standard Rates' },
     { name: 'miscRates', title: 'Misc. Rates' },
-    { name: 'punchCardRates', title: 'Punch Cards' },
     { name: 'golfPass', title: 'Golf Pass' },
   ],
   preview: {
@@ -27,12 +26,6 @@ export default {
       name: 'misc',
       type: 'miscRates',
       group: 'miscRates',
-    },
-    {
-      title: 'Punch Cards',
-      name: 'punchCardRates',
-      type: 'punchCardRates',
-      group: 'punchCardRates',
     },
     {
       title: 'Golf Pass',
