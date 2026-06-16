@@ -38,7 +38,9 @@ const FooterOne: FC<FooterOneProps> = ({ className, defaultTheme }) => {
                 </Link>
 
                 <div className="flex items-center gap-3 mt-5"></div>
-                <p className="text-accent/60 text-tagline-1 mt-4 ">Open 7 days a week, 7am - 7pm.</p>
+                <p className="text-accent/60 text-tagline-1 mt-4 text-center">
+                  Monday - Friday, 8am - 6pm. Saturday & Sunday, 7am - 7pm.
+                </p>
 
                 <div className=" flex flex-col text-center">
                   <Link
@@ -75,12 +77,6 @@ const FooterOne: FC<FooterOneProps> = ({ className, defaultTheme }) => {
                         Our Course
                       </Link>
                     </li>
-
-                    <li>
-                      <Link href="/lessons" className="footer-link">
-                        Lessons
-                      </Link>
-                    </li>
                     <li>
                       <Link href="/contact" className="footer-link">
                         Contact
@@ -104,7 +100,7 @@ const FooterOne: FC<FooterOneProps> = ({ className, defaultTheme }) => {
 
               <div className="flex flex-col space-y-3 text-center md:text-right pt-[3rem]">
                 <RevealAnimation delay={0.7} offset={5} start="top 105%">
-                  <Link href="/studio" className="" target='_blank'>
+                  <Link href="/studio" className="" target="_blank">
                     <p className="text-tagline-1 text-accent/60">
                       Copyright Hidden Valley Golf Course © {new Date().getFullYear()}
                     </p>

@@ -23,8 +23,8 @@ const contactInfoItems = [
     src: '/images/contact/email-me.svg',
     imageSize: { w: 22, h: 22 },
     title: 'Email Us',
-    content: 'dan@playhiddenvalleygolf.com',
-    link: 'mailto:dan@playhiddenvalleygolf.com',
+    content: 'info@golfcottagegrove.com',
+    link: 'mailto:info@golfcottagegrove.com',
   },
   {
     id: 3,
