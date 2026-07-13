@@ -4,7 +4,7 @@ export const DEFAULT_URL = 'https://hiddenvalleygolf.com/';
 export const DEFAULT_TITLE = 'Hidden Valley Golf Course | Cottage Grove, Oregon';
 export const DEFAULT_DESCRIPTION =
   'Hidden Valley Golf Course in Cottage Grove, OR. A scenic public golf course nestled in the beautiful Willamette Valley, offering a welcoming experience for golfers of all skill levels.';
-export const DEFAULT_IMAGE_URL = 'https://images.prismic.io/staticmania/aPD-K55xUNkB2D2X_og-image.jpg';
+export const DEFAULT_IMAGE_URL = 'https://www.golfcottagegrove.com/images/hero-images/carts-amongst-the-pines.jpg';
 
 
 //* This is just an object that sets default metadata
