@@ -39,7 +39,7 @@ const FooterOne: FC<FooterOneProps> = ({ className, defaultTheme }) => {
 
                 <div className="flex items-center gap-3 mt-5"></div>
                 <p className="text-accent/60 text-tagline-1 mt-4 text-center">
-                  Monday - Friday, 8am - 6pm. Saturday & Sunday, 7am - 7pm.
+                  Monday: Closed. Tuesday - Friday: 10am - 4pm. Saturday & Sunday: 8am - 4pm.
                 </p>
 
                 <div className=" flex flex-col text-center">
