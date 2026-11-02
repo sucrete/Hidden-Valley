@@ -69,7 +69,7 @@ const FooterOne: FC<FooterOneProps> = ({ className, defaultTheme }) => {
                   <ul className="space-y-0 sm:space-y-1 text-center md:text-left">
                     <li>
                       <Link href="/greens-fees" className="footer-link">
-                        Green Fees
+                        Greens Fees
                       </Link>
                     </li>
                     <li>

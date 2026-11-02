@@ -157,7 +157,7 @@ export const pagesMegaMenuColumns: MegaMenuColumn[] = [
 export const splitMenuLeft: NavigationItem[] = [
   {
     id: 'greens-fees',
-    label: 'Green Fees',
+    label: 'Greens Fees',
     href: '/greens-fees',
     hasDropdown: false,
   },
